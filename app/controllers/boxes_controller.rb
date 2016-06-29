@@ -1,14 +1,16 @@
 class BoxesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @boxes = Box.all
   end
 
   def new
-    @box = Box.new
+    @box = current_user.boxes.build
   end
 
   def create
-    @box = Box.new(box_params)
+    @box = current_user.boxes.build(box_params)
     if @box.save
       redirect_to @box
     else
