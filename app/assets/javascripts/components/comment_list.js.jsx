@@ -1,10 +1,10 @@
 var CommentList = React.createClass({
     componentDidMount: function() {
-        Store.addChangeListener(this._onChange)
+        commentStore.addChangeListener(this._onChange)
     },
 
     componentWillMount: function() {
-        Store.removeChangeListener(this._onChange)
+        commentStore.removeChangeListener(this._onChange)
     },
 
     _onChange: function() {
@@ -12,11 +12,10 @@ var CommentList = React.createClass({
     },
 
     render: function() {
-        // console.log("rendering");
         return (
             <div>
                 {
-                    Store.comments().map(function(comment) {
+                    commentStore.comments().map(function(comment) {
                         return (
                             <Comment key={comment.id} {... comment} />
                         )
