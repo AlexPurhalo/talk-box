@@ -1,7 +1,7 @@
 %h1= @box.name
 
 %ul
-  %li= react_component('CommentList', {comments: raw(render(template: 'comments/index.json.jbuilder'))})
+  %li= react_component('CommentList')
 
 = link_to 'Delete', box_path, method: :delete
 = link_to 'Home', root_path

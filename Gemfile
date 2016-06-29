@@ -59,3 +59,9 @@ gem 'devise', '~> 4.1', '>= 4.1.1'
 
 # Compile your JSX on demand or precompile for production.
 gem 'react-rails', '~> 1.7', '>= 1.7.2'
+
+# Use Facebook's Flux dispatcher and Node EventEmitter in your Rails project.
+gem 'flux-rails-assets', '~> 2.1'
+
+# lodash for the Rails asset pipeline
+gem 'lodash-rails', '~> 4.12'
