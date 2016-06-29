@@ -20,6 +20,13 @@ class BoxesController < ApplicationController
     @box = Box.find(params[:id])
   end
 
+  def destroy
+    @box = Box.find(params[:id])
+    @box.destroy
+
+    redirect_to root_path
+  end
+
   def box_params
     params.require(:box).permit(:name)
   end
