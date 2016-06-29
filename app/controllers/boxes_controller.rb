@@ -20,6 +20,7 @@ class BoxesController < ApplicationController
 
   def show
     @box = Box.find(params[:id])
+    @comments = @box.comments
   end
 
   def destroy
