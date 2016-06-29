@@ -56,3 +56,6 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.1', '>= 4.1.1'
+
+# Compile your JSX on demand or precompile for production.
+gem 'react-rails', '~> 1.7', '>= 1.7.2'

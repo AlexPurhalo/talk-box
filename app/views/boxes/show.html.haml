@@ -1,4 +1,7 @@
 %h1= @box.name
-%h2= @box.user.email
+
+%p= react_component('Comment', {author: "al@mail.com", body: "My first comment here"})
+
 = link_to 'Delete', box_path, method: :delete
 = link_to 'Home', root_path
+
