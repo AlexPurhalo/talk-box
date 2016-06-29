@@ -51,4 +51,5 @@ end
 # but it can function as a stand-alone templating engine.
 gem 'haml', '~> 4.0', '>= 4.0.7'
 
-
+# Forms made easy!
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
