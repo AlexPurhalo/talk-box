@@ -1,10 +1,8 @@
 %h1= @box.name
 
-%p= react_component('Comment', {author: "al@mail.com", body: "My first comment here"})
-
 %ul
 - @comments.each do |comment|
-  %li = react_component('Comment', {author: comment.author, body: comment.body })
+  %li= react_component('Comment', {author: comment.user.email, body: comment.body })
 
 = link_to 'Delete', box_path, method: :delete
 = link_to 'Home', root_path

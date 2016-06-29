@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160629115927) do
+ActiveRecord::Schema.define(version: 20160629120850) do
 
   create_table "boxes", force: :cascade do |t|
     t.string   "name"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20160629115927) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string   "author"
     t.text     "body"
     t.integer  "box_id"
     t.integer  "user_id"
