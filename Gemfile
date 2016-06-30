@@ -67,4 +67,4 @@ gem 'flux-rails-assets', '~> 2.1'
 gem 'lodash-rails', '~> 4.12'
 
 # A Sprockets transformer that converts ES6 code into vanilla ES5 with Babel JS.
-gem 'sprockets-es6', '~> 0.9.0'
+gem 'sprockets-es6', '0.6.1'
