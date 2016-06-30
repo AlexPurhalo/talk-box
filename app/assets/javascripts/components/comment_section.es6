@@ -1,6 +1,7 @@
 import Actions from '/actions';
 import CommentStore from '/stores/comment_store';
 import CommentList from '/components/comment_list';
+import CommentForm from '/components/comment_form';
 
 class CommentSection extends React.Component {
     static get childContextTypes() {
@@ -23,7 +24,10 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <CommentList />
+            <div>
+                <CommentForm />
+                <CommentList />
+            </div>
         );
     }
 }
