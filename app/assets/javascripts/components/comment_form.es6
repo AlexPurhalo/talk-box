@@ -1,6 +1,12 @@
 import Actions from '/actions';
 
 class CommentForm extends React.Component {
+    static get contextTypes() {
+        return {
+            actions: React.PropTypes.func.isRequired
+        }
+    }
+
     constructor () {
         super();
         this.defaultState = { body: '' };
@@ -11,13 +17,11 @@ class CommentForm extends React.Component {
         let prop = [];
         prop[event.target.name] = event.target.value
         this.setState(prop);
-        console.log(prop);
     }
 
     submitComment (event) {
         event.preventDefault();
-        Actions.addComment(this.state);
-        console.log(this.state)
+        this.context.actions.addComment(this.state);
         this.setState(this.defaultState);
     }
 

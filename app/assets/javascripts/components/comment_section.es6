@@ -6,13 +6,15 @@ import CommentForm from '/components/comment_form';
 class CommentSection extends React.Component {
     static get childContextTypes() {
         return {
-            store: React.PropTypes.object.isRequired
+            store: React.PropTypes.object.isRequired,
+            actions: React.PropTypes.func.isRequired
         }
     }
 
     getChildContext() {
         return {
-            store: this.store
+            store: this.store,
+            actions: this.actions
         }
     }
 
@@ -20,6 +22,7 @@ class CommentSection extends React.Component {
         super();
 
         this.store = new CommentStore;
+        this.actions = Actions;
     }
 
     render() {
@@ -35,4 +38,3 @@ class CommentSection extends React.Component {
 export default CommentSection;
 
 window.CommentSection = CommentSection;
-window.Actions = Actions;
