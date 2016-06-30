@@ -21,7 +21,6 @@
 //= require eventemitter
 //= require lodash
 //= require components
-//= require app
 //= require_tree .
 
-System.import('/app');
+System.import('/components/comment_section');
