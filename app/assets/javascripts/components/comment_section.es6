@@ -3,6 +3,18 @@ import CommentStore from '/stores/comment_store';
 import CommentList from '/components/comment_list';
 
 class CommentSection extends React.Component {
+    static get childContextTypes() {
+        return {
+            store: React.PropTypes.object.isRequired
+        }
+    }
+
+    getChildContext() {
+        return {
+            store: this.store
+        }
+    }
+
     constructor() {
         super();
 
@@ -11,7 +23,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <CommentList store={this.store} />
+            <CommentList />
         );
     }
 }
