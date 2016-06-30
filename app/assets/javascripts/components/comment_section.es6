@@ -1,6 +1,6 @@
 import Actions from '/actions';
 import CommentStore from '/stores/comment_store';
-import CommentList from '/components/comment_list.js';
+import CommentList from '/components/comment_list';
 
 class CommentSection extends React.Component {
     constructor() {

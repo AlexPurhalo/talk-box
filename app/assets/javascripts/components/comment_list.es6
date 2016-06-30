@@ -1,3 +1,5 @@
+import Comment from '/components/comment';
+
 class CommentList extends React.Component {
     componentDidMount () {
         this.props.store.addChangeListener(this._onChange.bind(this))
