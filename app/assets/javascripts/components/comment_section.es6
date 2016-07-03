@@ -18,11 +18,13 @@ class CommentSection extends React.Component {
         }
     }
 
-    constructor() {
+    constructor(props) {
         super();
 
         this.store = new CommentStore;
         this.actions = Actions;
+        this.actions.setComments(JSON.parse(props.comments));
+        console.log(props)
     }
 
     render() {

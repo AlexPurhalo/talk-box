@@ -1,5 +1,3 @@
-import Actions from '/actions';
-
 class CommentForm extends React.Component {
     static get contextTypes() {
         return {
